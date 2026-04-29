@@ -1,0 +1,11 @@
+# Executables
+*.out
+ou_sim
+
+# Objects and Modules
+*.o
+*.mod
+
+# OS generated files
+.DS_Store
+Thumbs.db
