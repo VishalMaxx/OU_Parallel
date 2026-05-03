@@ -6,17 +6,17 @@ program ou_parallel
     real(8), parameter :: dt = 0.01_8, theta = 0.7_8, mu = 1.2_8, sigma = 0.3_8
     integer, parameter :: n_steps = 1000         
     
-    ! Variables
+    
     integer :: i, j, n_simulations
     real(8) :: t1, t2, x, r1, r2, dw, total_sum, dt_sqrt
     character(len=32) :: arg
 
-    ! Reading command line argument for number of simulations-check this once before changing as there was some inintal struggle
+ 
     if (command_argument_count() >= 1) then
         call get_command_argument(1, arg)
         read(arg, *) n_simulations
     else
-        n_simulations = 1000000 ! Defaulting this value (previously less)
+        n_simulations = 1000000 
     end if
 
     dt_sqrt = sqrt(dt)

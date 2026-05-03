@@ -15,7 +15,7 @@ program ou_serial
         do j = 1, n_steps
             call random_number(r1)
             call random_number(r2)
-            ! Trying with Box-Muller transform for Gaussian Noise
+            ! Box Muller Tranform eqn down here
             dw = sqrt(-2.0_8 * log(r1)) * cos(2.0_8 * 3.1415926535_8 * r2)
             x = x + theta * (mu - x) * dt + sigma * dw * dt_sqrt
         end do
